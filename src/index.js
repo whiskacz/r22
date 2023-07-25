@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import ReactDom from 'react-dom/client';
 import StartBoard from './components/StartBoard';
-import MainBoard from './components/MainBoard';
+import Card from './components/Card';
 import './index.css';
 import archer from './svg/archer.svg';
 import horn from './svg/horn.svg';
-import shield from './svg/shield';
+import shield from './svg/shield.svg';
 import spearMan from './svg/spear-man.svg';
 import swardHorseMan from './svg/sward-horse-man.svg';
-import swords from './svg/swords';
+import swords from './svg/swords.svg';
 
 
 function R22App () {
@@ -23,9 +23,16 @@ function R22App () {
     return (
         <div>
        
-            {board ? 
-            <StartBoard boardChange={boardChange}/> :
-            <MainBoard />}
+            {/* {board ? 
+            <StartBoard boardChange={boardChange}/> : */}
+            <Card
+            archer={archer}
+            horn={horn}
+            shield={shield}
+            heroImg={spearMan}
+            heroName={"Spearman"}
+            swords={swords}
+            />
        </div>
     )
 }
